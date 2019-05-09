@@ -1,0 +1,843 @@
+2019-05-07 16:53:12,606 ERROR 7484 nodejs.ValidationError: Signin validation failed: lastSignTime: Cast to Date failed for value "[Function: toLocaleDateString]" at path "lastSignTime"
+    at new ValidationError (E:\workspace\demo\demo02\node_modules\mongoose\lib\error\validation.js:30:11)
+    at model.Document.invalidate (E:\workspace\demo\demo02\node_modules\mongoose\lib\document.js:2259:32)
+    at model.$set (E:\workspace\demo\demo02\node_modules\mongoose\lib\document.js:1079:10)
+    at model._handleIndex (E:\workspace\demo\demo02\node_modules\mongoose\lib\document.js:844:14)
+    at model.$set (E:\workspace\demo\demo02\node_modules\mongoose\lib\document.js:789:22)
+    at model.Document (E:\workspace\demo\demo02\node_modules\mongoose\lib\document.js:122:12)
+    at model.Model (E:\workspace\demo\demo02\node_modules\mongoose\lib\model.js:95:12)
+    at new model (E:\workspace\demo\demo02\node_modules\mongoose\lib\model.js:4570:13)
+    at SigninService.signin (E:\workspace\demo\demo02\app\service\signin.js:8:18)
+    at HomeController.signin (E:\workspace\demo\demo02\app\controller\home.js:13:31)
+    at Object.callFn (E:\workspace\demo\demo02\node_modules\egg-core\lib\utils\index.js:44:21)
+    at Object.classControllerMiddleware (E:\workspace\demo\demo02\node_modules\egg-core\lib\loader\mixin\controller.js:87:20)
+    at Object.callFn (E:\workspace\demo\demo02\node_modules\@eggjs\router\lib\utils.js:12:21)
+    at wrappedController (E:\workspace\demo\demo02\node_modules\@eggjs\router\lib\egg_router.js:322:18)
+    at dispatch (E:\workspace\demo\demo02\node_modules\koa-compose\index.js:44:32)
+    at next (E:\workspace\demo\demo02\node_modules\koa-compose\index.js:45:18)
+errors: {"lastSignTime":{"message":"Cast to Date failed for value \"[Function: toLocaleDateString]\" at path \"lastSignTime\"","name":"CastError","stringValue":"\"[Function: toLocaleDateString]\"","kind":"Date","path":"lastSignTime","reason":{"message":"Cast to date failed for value \"[Function: toLocaleDateString]\" at path \"lastSignTime\"","name":"CastError","stringValue":"\"[Function: toLocaleDateString]\"","kind":"date","path":"lastSignTime"}}}
+_message: "Signin validation failed"
+message: "Signin validation failed: lastSignTime: Cast to Date failed for value \"[Function: toLocaleDateString]\" at path \"lastSignTime\""
+name: "ValidationError"
+pid: 7484
+hostname: DESKTOP-CCIPRHH
+
+2019-05-07 17:17:02,524 ERROR 15892 [-/127.0.0.1/-/1ms GET /delsign] nodejs.TypeError: Cannot read property 'deleteOne' of undefined
+    at SigninService.delsign (E:\workspace\demo\demo02\app\service\signin.js:18:46)
+    at HomeController.delsign (E:\workspace\demo\demo02\app\controller\home.js:16:31)
+    at Object.callFn (E:\workspace\demo\demo02\node_modules\egg-core\lib\utils\index.js:44:21)
+    at Object.classControllerMiddleware (E:\workspace\demo\demo02\node_modules\egg-core\lib\loader\mixin\controller.js:87:20)
+    at Object.callFn (E:\workspace\demo\demo02\node_modules\@eggjs\router\lib\utils.js:12:21)
+    at wrappedController (E:\workspace\demo\demo02\node_modules\@eggjs\router\lib\egg_router.js:322:18)
+    at dispatch (E:\workspace\demo\demo02\node_modules\koa-compose\index.js:44:32)
+    at next (E:\workspace\demo\demo02\node_modules\koa-compose\index.js:45:18)
+    at E:\workspace\demo\demo02\node_modules\@eggjs\router\lib\router.js:190:18
+    at dispatch (E:\workspace\demo\demo02\node_modules\koa-compose\index.js:44:32)
+    at E:\workspace\demo\demo02\node_modules\koa-compose\index.js:36:12
+    at dispatch (E:\workspace\demo\demo02\node_modules\@eggjs\router\lib\router.js:195:33)
+    at dispatch (E:\workspace\demo\demo02\node_modules\koa\node_modules\koa-compose\index.js:42:32)
+    at E:\workspace\demo\demo02\node_modules\egg-development\app\middleware\egg_loader_trace.js:9:56
+    at dispatch (E:\workspace\demo\demo02\node_modules\koa\node_modules\koa-compose\index.js:42:32)
+    at i18n (E:\workspace\demo\demo02\node_modules\egg-i18n\app\middleware\i18n.js:13:12)
+
+pid: 15892
+hostname: DESKTOP-CCIPRHH
+
+2019-05-07 21:23:26,411 ERROR 11656 [-/127.0.0.1/-/26ms GET /] nodejs.ReferenceError: E:\workspace\demo\demo02\app\view\index.html:75
+    73|                       <h2>请点击进行签到!</h2>
+    74|                       <p></p>
+ >> 75|                       <p>您总共签到:<%-count%>天</p>
+    76|                       <p>已经连续签到:<%-continuousCount%>天</p>
+    77|                       <p>您的金币总数:<%-goldCoins%></p>
+    78|                       <p><a id="signin" class="btn btn-primary btn-lg" href="#" role="button">签到</a></p>
+
+count is not defined
+    73|                       <h2>请点击进行签到!</h2>
+    74|                       <p></p>
+ >> 75|                       <p>您总共签到:<%-count%>天</p>
+    76|                       <p>已经连续签到:<%-continuousCount%>天</p>
+    77|                       <p>您的金币总数:<%-goldCoins%></p>
+    78|                       <p><a id="signin" class="btn btn-primary btn-lg" href="#" role="button">签到</a></p>
+
+count is not defined
+    at eval (eval at compile (E:\workspace\demo\demo02\node_modules\ejs\lib\ejs.js:618:12), <anonymous>:14:16)
+    at returnedFn (E:\workspace\demo\demo02\node_modules\ejs\lib\ejs.js:653:17)
+    at tryHandleCache (E:\workspace\demo\demo02\node_modules\ejs\lib\ejs.js:251:36)
+    at Object.exports.renderFile (E:\workspace\demo\demo02\node_modules\ejs\lib\ejs.js:482:10)
+    at Promise (E:\workspace\demo\demo02\node_modules\egg-view-ejs\lib\view.js:16:11)
+    at new Promise (<anonymous>)
+    at EjsView.[EjsView#_render] (E:\workspace\demo\demo02\node_modules\egg-view-ejs\lib\view.js:15:12)
+    at EjsView.render (E:\workspace\demo\demo02\node_modules\egg-view-ejs\lib\view.js:28:36)
+    at ContextView.[contextView#render] (E:\workspace\demo\demo02\node_modules\egg-view\lib\context_view.js:70:23)
+    at <anonymous>
+path: "E:\\workspace\\demo\\demo02\\app\\view\\index.html"
+pid: 11656
+hostname: DESKTOP-CCIPRHH
+
+2019-05-07 21:29:25,116 ERROR 5976 [-/127.0.0.1/-/19ms GET /] nodejs.TypeError: service.signin.index is not a function
+    at HomeController.index (E:\workspace\demo\demo02\app\controller\home.js:9:39)
+    at Object.callFn (E:\workspace\demo\demo02\node_modules\egg-core\lib\utils\index.js:44:21)
+    at Object.classControllerMiddleware (E:\workspace\demo\demo02\node_modules\egg-core\lib\loader\mixin\controller.js:87:20)
+    at Object.callFn (E:\workspace\demo\demo02\node_modules\@eggjs\router\lib\utils.js:12:21)
+    at wrappedController (E:\workspace\demo\demo02\node_modules\@eggjs\router\lib\egg_router.js:322:18)
+    at dispatch (E:\workspace\demo\demo02\node_modules\koa-compose\index.js:44:32)
+    at next (E:\workspace\demo\demo02\node_modules\koa-compose\index.js:45:18)
+    at E:\workspace\demo\demo02\node_modules\@eggjs\router\lib\router.js:190:18
+    at dispatch (E:\workspace\demo\demo02\node_modules\koa-compose\index.js:44:32)
+    at E:\workspace\demo\demo02\node_modules\koa-compose\index.js:36:12
+    at dispatch (E:\workspace\demo\demo02\node_modules\@eggjs\router\lib\router.js:195:33)
+    at dispatch (E:\workspace\demo\demo02\node_modules\koa\node_modules\koa-compose\index.js:42:32)
+    at E:\workspace\demo\demo02\node_modules\egg-development\app\middleware\egg_loader_trace.js:9:56
+    at dispatch (E:\workspace\demo\demo02\node_modules\koa\node_modules\koa-compose\index.js:42:32)
+    at i18n (E:\workspace\demo\demo02\node_modules\egg-i18n\app\middleware\i18n.js:13:12)
+    at dispatch (E:\workspace\demo\demo02\node_modules\koa\node_modules\koa-compose\index.js:42:32)
+
+pid: 5976
+hostname: DESKTOP-CCIPRHH
+
+2019-05-07 21:29:30,540 ERROR 5976 [-/127.0.0.1/-/0ms GET /] nodejs.TypeError: service.signin.index is not a function
+    at HomeController.index (E:\workspace\demo\demo02\app\controller\home.js:9:39)
+    at Object.callFn (E:\workspace\demo\demo02\node_modules\egg-core\lib\utils\index.js:44:21)
+    at Object.classControllerMiddleware (E:\workspace\demo\demo02\node_modules\egg-core\lib\loader\mixin\controller.js:87:20)
+    at Object.callFn (E:\workspace\demo\demo02\node_modules\@eggjs\router\lib\utils.js:12:21)
+    at wrappedController (E:\workspace\demo\demo02\node_modules\@eggjs\router\lib\egg_router.js:322:18)
+    at dispatch (E:\workspace\demo\demo02\node_modules\koa-compose\index.js:44:32)
+    at next (E:\workspace\demo\demo02\node_modules\koa-compose\index.js:45:18)
+    at E:\workspace\demo\demo02\node_modules\@eggjs\router\lib\router.js:190:18
+    at dispatch (E:\workspace\demo\demo02\node_modules\koa-compose\index.js:44:32)
+    at E:\workspace\demo\demo02\node_modules\koa-compose\index.js:36:12
+    at dispatch (E:\workspace\demo\demo02\node_modules\@eggjs\router\lib\router.js:195:33)
+    at dispatch (E:\workspace\demo\demo02\node_modules\koa\node_modules\koa-compose\index.js:42:32)
+    at E:\workspace\demo\demo02\node_modules\egg-development\app\middleware\egg_loader_trace.js:9:56
+    at dispatch (E:\workspace\demo\demo02\node_modules\koa\node_modules\koa-compose\index.js:42:32)
+    at i18n (E:\workspace\demo\demo02\node_modules\egg-i18n\app\middleware\i18n.js:13:12)
+    at dispatch (E:\workspace\demo\demo02\node_modules\koa\node_modules\koa-compose\index.js:42:32)
+
+pid: 5976
+hostname: DESKTOP-CCIPRHH
+
+2019-05-07 21:34:04,557 ERROR 6884 [-/127.0.0.1/-/22ms GET /] nodejs.ReferenceError: E:\workspace\demo\demo02\app\view\index.html:75
+    73|                       <h2>请点击进行签到!</h2>
+    74|                       <p></p>
+ >> 75|                       <p>您总共签到:<%-info.count%>天</p>
+    76|                       <p>已经连续签到:<%-info.continuousCount%>天</p>
+    77|                       <p>您的金币总数:<%-info.goldCoins%></p>
+    78|                       <p><a id="signin" class="btn btn-primary btn-lg" href="#" role="button">签到</a></p>
+
+info is not defined
+    73|                       <h2>请点击进行签到!</h2>
+    74|                       <p></p>
+ >> 75|                       <p>您总共签到:<%-info.count%>天</p>
+    76|                       <p>已经连续签到:<%-info.continuousCount%>天</p>
+    77|                       <p>您的金币总数:<%-info.goldCoins%></p>
+    78|                       <p><a id="signin" class="btn btn-primary btn-lg" href="#" role="button">签到</a></p>
+
+info is not defined
+    at eval (eval at compile (E:\workspace\demo\demo02\node_modules\ejs\lib\ejs.js:618:12), <anonymous>:14:16)
+    at returnedFn (E:\workspace\demo\demo02\node_modules\ejs\lib\ejs.js:653:17)
+    at tryHandleCache (E:\workspace\demo\demo02\node_modules\ejs\lib\ejs.js:251:36)
+    at Object.exports.renderFile (E:\workspace\demo\demo02\node_modules\ejs\lib\ejs.js:482:10)
+    at Promise (E:\workspace\demo\demo02\node_modules\egg-view-ejs\lib\view.js:16:11)
+    at new Promise (<anonymous>)
+    at EjsView.[EjsView#_render] (E:\workspace\demo\demo02\node_modules\egg-view-ejs\lib\view.js:15:12)
+    at EjsView.render (E:\workspace\demo\demo02\node_modules\egg-view-ejs\lib\view.js:28:36)
+    at ContextView.[contextView#render] (E:\workspace\demo\demo02\node_modules\egg-view\lib\context_view.js:70:23)
+    at <anonymous>
+path: "E:\\workspace\\demo\\demo02\\app\\view\\index.html"
+pid: 6884
+hostname: DESKTOP-CCIPRHH
+
+2019-05-07 21:34:41,028 ERROR 17232 [-/127.0.0.1/-/23ms GET /] nodejs.ReferenceError: E:\workspace\demo\demo02\app\view\index.html:79
+    77|                       <p>您的金币总数:<%-goldCoins%></p>
+    78|                       <p><a id="signin" class="btn btn-primary btn-lg" href="#" role="button">签到</a></p>
+ >> 79|                       <p><%-data%></p>
+    80|                     </div>
+    81|                 </div>
+    82|             </div>
+
+data is not defined
+    77|                       <p>您的金币总数:<%-goldCoins%></p>
+    78|                       <p><a id="signin" class="btn btn-primary btn-lg" href="#" role="button">签到</a></p>
+ >> 79|                       <p><%-data%></p>
+    80|                     </div>
+    81|                 </div>
+    82|             </div>
+
+data is not defined
+    at eval (eval at compile (E:\workspace\demo\demo02\node_modules\ejs\lib\ejs.js:618:12), <anonymous>:23:16)
+    at returnedFn (E:\workspace\demo\demo02\node_modules\ejs\lib\ejs.js:653:17)
+    at tryHandleCache (E:\workspace\demo\demo02\node_modules\ejs\lib\ejs.js:251:36)
+    at Object.exports.renderFile (E:\workspace\demo\demo02\node_modules\ejs\lib\ejs.js:482:10)
+    at Promise (E:\workspace\demo\demo02\node_modules\egg-view-ejs\lib\view.js:16:11)
+    at new Promise (<anonymous>)
+    at EjsView.[EjsView#_render] (E:\workspace\demo\demo02\node_modules\egg-view-ejs\lib\view.js:15:12)
+    at EjsView.render (E:\workspace\demo\demo02\node_modules\egg-view-ejs\lib\view.js:28:36)
+    at ContextView.[contextView#render] (E:\workspace\demo\demo02\node_modules\egg-view\lib\context_view.js:70:23)
+    at <anonymous>
+path: "E:\\workspace\\demo\\demo02\\app\\view\\index.html"
+pid: 17232
+hostname: DESKTOP-CCIPRHH
+
+2019-05-07 21:53:45,341 ERROR 2308 [-/127.0.0.1/-/5ms GET /] nodejs.Error: Please set config.keys first
+    at Application.get keys [as keys] (E:\workspace\demo\demo02\node_modules\egg\lib\application.js:257:15)
+    at Object.get cookies [as cookies] (E:\workspace\demo\demo02\node_modules\egg\app\extend\context.js:22:66)
+    at Object.get [egg-security#CSRF_SECRET] (E:\workspace\demo\demo02\node_modules\egg-security\app\extend\context.js:86:33)
+    at Object.ensureCsrfSecret (E:\workspace\demo\demo02\node_modules\egg-security\app\extend\context.js:97:13)
+    at csrf (E:\workspace\demo\demo02\node_modules\egg-security\lib\middlewares\csrf.js:14:9)
+    at dispatch (E:\workspace\demo\demo02\node_modules\egg-security\node_modules\koa-compose\index.js:42:32)
+    at E:\workspace\demo\demo02\node_modules\egg-security\node_modules\koa-compose\index.js:34:12
+    at dispatch (E:\workspace\demo\demo02\node_modules\koa\node_modules\koa-compose\index.js:42:32)
+    at session (E:\workspace\demo\demo02\node_modules\koa-session\index.js:41:13)
+    at dispatch (E:\workspace\demo\demo02\node_modules\koa\node_modules\koa-compose\index.js:42:32)
+    at overrideMethod (E:\workspace\demo\demo02\node_modules\koa-override\index.js:13:70)
+    at dispatch (E:\workspace\demo\demo02\node_modules\koa\node_modules\koa-compose\index.js:42:32)
+    at bodyParser (E:\workspace\demo\demo02\node_modules\koa-bodyparser\index.js:86:11)
+    at <anonymous>
+    at process._tickCallback (internal/process/next_tick.js:118:7)
+
+pid: 2308
+hostname: DESKTOP-CCIPRHH
+
+2019-05-07 21:59:29,558 ERROR 14384 [-/127.0.0.1/-/12ms POST /signin] nodejs.TypeError: Cannot read property 'str_stamp' of undefined
+    at SigninService.signin (E:\workspace\demo\demo02\app\service\signin.js:19:55)
+    at HomeController.signin (E:\workspace\demo\demo02\app\controller\home.js:23:39)
+    at Object.callFn (E:\workspace\demo\demo02\node_modules\egg-core\lib\utils\index.js:44:21)
+    at Object.classControllerMiddleware (E:\workspace\demo\demo02\node_modules\egg-core\lib\loader\mixin\controller.js:87:20)
+    at Object.callFn (E:\workspace\demo\demo02\node_modules\@eggjs\router\lib\utils.js:12:21)
+    at wrappedController (E:\workspace\demo\demo02\node_modules\@eggjs\router\lib\egg_router.js:322:18)
+    at dispatch (E:\workspace\demo\demo02\node_modules\koa-compose\index.js:44:32)
+    at next (E:\workspace\demo\demo02\node_modules\koa-compose\index.js:45:18)
+    at E:\workspace\demo\demo02\node_modules\@eggjs\router\lib\router.js:190:18
+    at dispatch (E:\workspace\demo\demo02\node_modules\koa-compose\index.js:44:32)
+    at E:\workspace\demo\demo02\node_modules\koa-compose\index.js:36:12
+    at dispatch (E:\workspace\demo\demo02\node_modules\@eggjs\router\lib\router.js:195:33)
+    at dispatch (E:\workspace\demo\demo02\node_modules\koa\node_modules\koa-compose\index.js:42:32)
+    at E:\workspace\demo\demo02\node_modules\egg-development\app\middleware\egg_loader_trace.js:9:56
+    at dispatch (E:\workspace\demo\demo02\node_modules\koa\node_modules\koa-compose\index.js:42:32)
+    at i18n (E:\workspace\demo\demo02\node_modules\egg-i18n\app\middleware\i18n.js:13:12)
+
+pid: 14384
+hostname: DESKTOP-CCIPRHH
+
+2019-05-08 10:22:07,647 ERROR 7764 [-/127.0.0.1/-/162ms POST /signin] nodejs.TypeError: Cannot read property 'str_stamp' of undefined
+    at SigninService.signin (E:\workspace\demo\demo02\app\service\signin.js:17:50)
+    at HomeController.signin (E:\workspace\demo\demo02\app\controller\home.js:26:39)
+    at Object.callFn (E:\workspace\demo\demo02\node_modules\egg-core\lib\utils\index.js:44:21)
+    at Object.classControllerMiddleware (E:\workspace\demo\demo02\node_modules\egg-core\lib\loader\mixin\controller.js:87:20)
+    at Object.callFn (E:\workspace\demo\demo02\node_modules\@eggjs\router\lib\utils.js:12:21)
+    at wrappedController (E:\workspace\demo\demo02\node_modules\@eggjs\router\lib\egg_router.js:322:18)
+    at dispatch (E:\workspace\demo\demo02\node_modules\koa-compose\index.js:44:32)
+    at next (E:\workspace\demo\demo02\node_modules\koa-compose\index.js:45:18)
+    at E:\workspace\demo\demo02\node_modules\@eggjs\router\lib\router.js:190:18
+    at dispatch (E:\workspace\demo\demo02\node_modules\koa-compose\index.js:44:32)
+    at E:\workspace\demo\demo02\node_modules\koa-compose\index.js:36:12
+    at dispatch (E:\workspace\demo\demo02\node_modules\@eggjs\router\lib\router.js:195:33)
+    at dispatch (E:\workspace\demo\demo02\node_modules\koa\node_modules\koa-compose\index.js:42:32)
+    at E:\workspace\demo\demo02\node_modules\egg-development\app\middleware\egg_loader_trace.js:9:56
+    at dispatch (E:\workspace\demo\demo02\node_modules\koa\node_modules\koa-compose\index.js:42:32)
+    at i18n (E:\workspace\demo\demo02\node_modules\egg-i18n\app\middleware\i18n.js:13:12)
+
+pid: 7764
+hostname: DESKTOP-CCIPRHH
+
+2019-05-08 10:23:57,004 ERROR 14060 [-/127.0.0.1/-/10ms POST /signin] nodejs.TypeError: Cannot read property 'str_stamp' of undefined
+    at SigninService.signin (E:\workspace\demo\demo02\app\service\signin.js:19:50)
+    at HomeController.signin (E:\workspace\demo\demo02\app\controller\home.js:24:39)
+    at Object.callFn (E:\workspace\demo\demo02\node_modules\egg-core\lib\utils\index.js:44:21)
+    at Object.classControllerMiddleware (E:\workspace\demo\demo02\node_modules\egg-core\lib\loader\mixin\controller.js:87:20)
+    at Object.callFn (E:\workspace\demo\demo02\node_modules\@eggjs\router\lib\utils.js:12:21)
+    at wrappedController (E:\workspace\demo\demo02\node_modules\@eggjs\router\lib\egg_router.js:322:18)
+    at dispatch (E:\workspace\demo\demo02\node_modules\koa-compose\index.js:44:32)
+    at next (E:\workspace\demo\demo02\node_modules\koa-compose\index.js:45:18)
+    at E:\workspace\demo\demo02\node_modules\@eggjs\router\lib\router.js:190:18
+    at dispatch (E:\workspace\demo\demo02\node_modules\koa-compose\index.js:44:32)
+    at E:\workspace\demo\demo02\node_modules\koa-compose\index.js:36:12
+    at dispatch (E:\workspace\demo\demo02\node_modules\@eggjs\router\lib\router.js:195:33)
+    at dispatch (E:\workspace\demo\demo02\node_modules\koa\node_modules\koa-compose\index.js:42:32)
+    at E:\workspace\demo\demo02\node_modules\egg-development\app\middleware\egg_loader_trace.js:9:56
+    at dispatch (E:\workspace\demo\demo02\node_modules\koa\node_modules\koa-compose\index.js:42:32)
+    at i18n (E:\workspace\demo\demo02\node_modules\egg-i18n\app\middleware\i18n.js:13:12)
+
+pid: 14060
+hostname: DESKTOP-CCIPRHH
+
+2019-05-08 10:25:56,285 ERROR 9408 [-/127.0.0.1/-/11ms POST /signin] nodejs.TypeError: Cannot read property 'str_stamp' of undefined
+    at SigninService.signin (E:\workspace\demo\demo02\app\service\signin.js:20:50)
+    at HomeController.signin (E:\workspace\demo\demo02\app\controller\home.js:25:39)
+    at Object.callFn (E:\workspace\demo\demo02\node_modules\egg-core\lib\utils\index.js:44:21)
+    at Object.classControllerMiddleware (E:\workspace\demo\demo02\node_modules\egg-core\lib\loader\mixin\controller.js:87:20)
+    at Object.callFn (E:\workspace\demo\demo02\node_modules\@eggjs\router\lib\utils.js:12:21)
+    at wrappedController (E:\workspace\demo\demo02\node_modules\@eggjs\router\lib\egg_router.js:322:18)
+    at dispatch (E:\workspace\demo\demo02\node_modules\koa-compose\index.js:44:32)
+    at next (E:\workspace\demo\demo02\node_modules\koa-compose\index.js:45:18)
+    at E:\workspace\demo\demo02\node_modules\@eggjs\router\lib\router.js:190:18
+    at dispatch (E:\workspace\demo\demo02\node_modules\koa-compose\index.js:44:32)
+    at E:\workspace\demo\demo02\node_modules\koa-compose\index.js:36:12
+    at dispatch (E:\workspace\demo\demo02\node_modules\@eggjs\router\lib\router.js:195:33)
+    at dispatch (E:\workspace\demo\demo02\node_modules\koa\node_modules\koa-compose\index.js:42:32)
+    at E:\workspace\demo\demo02\node_modules\egg-development\app\middleware\egg_loader_trace.js:9:56
+    at dispatch (E:\workspace\demo\demo02\node_modules\koa\node_modules\koa-compose\index.js:42:32)
+    at i18n (E:\workspace\demo\demo02\node_modules\egg-i18n\app\middleware\i18n.js:13:12)
+
+pid: 9408
+hostname: DESKTOP-CCIPRHH
+
+2019-05-08 10:28:45,981 ERROR 2712 [-/127.0.0.1/-/12ms POST /signin] nodejs.TypeError: Cannot read property 'str_stamp' of undefined
+    at SigninService.signin (E:\workspace\demo\demo02\app\service\signin.js:20:50)
+    at HomeController.signin (E:\workspace\demo\demo02\app\controller\home.js:25:39)
+    at Object.callFn (E:\workspace\demo\demo02\node_modules\egg-core\lib\utils\index.js:44:21)
+    at Object.classControllerMiddleware (E:\workspace\demo\demo02\node_modules\egg-core\lib\loader\mixin\controller.js:87:20)
+    at Object.callFn (E:\workspace\demo\demo02\node_modules\@eggjs\router\lib\utils.js:12:21)
+    at wrappedController (E:\workspace\demo\demo02\node_modules\@eggjs\router\lib\egg_router.js:322:18)
+    at dispatch (E:\workspace\demo\demo02\node_modules\koa-compose\index.js:44:32)
+    at next (E:\workspace\demo\demo02\node_modules\koa-compose\index.js:45:18)
+    at E:\workspace\demo\demo02\node_modules\@eggjs\router\lib\router.js:190:18
+    at dispatch (E:\workspace\demo\demo02\node_modules\koa-compose\index.js:44:32)
+    at E:\workspace\demo\demo02\node_modules\koa-compose\index.js:36:12
+    at dispatch (E:\workspace\demo\demo02\node_modules\@eggjs\router\lib\router.js:195:33)
+    at dispatch (E:\workspace\demo\demo02\node_modules\koa\node_modules\koa-compose\index.js:42:32)
+    at E:\workspace\demo\demo02\node_modules\egg-development\app\middleware\egg_loader_trace.js:9:56
+    at dispatch (E:\workspace\demo\demo02\node_modules\koa\node_modules\koa-compose\index.js:42:32)
+    at i18n (E:\workspace\demo\demo02\node_modules\egg-i18n\app\middleware\i18n.js:13:12)
+
+pid: 2712
+hostname: DESKTOP-CCIPRHH
+
+2019-05-08 10:30:10,215 ERROR 13300 [-/127.0.0.1/-/15ms POST /signin] nodejs.TypeError: Cannot read property 'str_stamp' of undefined
+    at SigninService.signin (E:\workspace\demo\demo02\app\service\signin.js:29:52)
+    at <anonymous>
+    at process._tickCallback (internal/process/next_tick.js:118:7)
+
+pid: 13300
+hostname: DESKTOP-CCIPRHH
+
+2019-05-08 10:31:07,464 ERROR 6664 [-/127.0.0.1/-/15ms POST /signin] nodejs.TypeError: Cannot read property 'data' of undefined
+    at HomeController.signin (E:\workspace\demo\demo02\app\controller\home.js:27:18)
+    at <anonymous>
+    at process._tickCallback (internal/process/next_tick.js:118:7)
+
+pid: 6664
+hostname: DESKTOP-CCIPRHH
+
+2019-05-08 10:32:08,737 ERROR 7124 [-/127.0.0.1/-/16ms POST /signin] nodejs.TypeError: Cannot read property 'data' of undefined
+    at HomeController.signin (E:\workspace\demo\demo02\app\controller\home.js:28:18)
+    at <anonymous>
+    at process._tickCallback (internal/process/next_tick.js:118:7)
+
+pid: 7124
+hostname: DESKTOP-CCIPRHH
+
+2019-05-08 10:32:42,026 ERROR 1552 [-/127.0.0.1/-/18ms POST /signin] nodejs.TypeError: Cannot read property 'data' of undefined
+    at HomeController.signin (E:\workspace\demo\demo02\app\controller\home.js:28:18)
+    at <anonymous>
+    at process._tickCallback (internal/process/next_tick.js:118:7)
+
+pid: 1552
+hostname: DESKTOP-CCIPRHH
+
+2019-05-08 10:52:13,885 ERROR 13972 [-/127.0.0.1/-/35ms POST /signin] nodejs.CastError: Cast to number failed for value "NaN" at path "count"
+    at new CastError (E:\workspace\demo\demo02\node_modules\mongoose\lib\error\cast.js:29:11)
+    at SchemaNumber.cast (E:\workspace\demo\demo02\node_modules\mongoose\lib\schema\number.js:311:11)
+    at SchemaNumber.SchemaType.applySetters (E:\workspace\demo\demo02\node_modules\mongoose\lib\schematype.js:894:12)
+    at SchemaNumber.SchemaType._castForQuery (E:\workspace\demo\demo02\node_modules\mongoose\lib\schematype.js:1306:15)
+    at SchemaNumber.castForQuery (E:\workspace\demo\demo02\node_modules\mongoose\lib\schema\number.js:363:14)
+    at SchemaNumber.SchemaType.castForQueryWrapper (E:\workspace\demo\demo02\node_modules\mongoose\lib\schematype.js:1275:15)
+    at castUpdateVal (E:\workspace\demo\demo02\node_modules\mongoose\lib\helpers\query\castUpdate.js:434:19)
+    at walkUpdatePath (E:\workspace\demo\demo02\node_modules\mongoose\lib\helpers\query\castUpdate.js:261:22)
+    at castUpdate (E:\workspace\demo\demo02\node_modules\mongoose\lib\helpers\query\castUpdate.js:79:18)
+    at model.Query._castUpdate (E:\workspace\demo\demo02\node_modules\mongoose\lib\query.js:4307:10)
+    at castDoc (E:\workspace\demo\demo02\node_modules\mongoose\lib\query.js:4335:18)
+    at model.Query._updateThunk (E:\workspace\demo\demo02\node_modules\mongoose\lib\query.js:3556:17)
+    at model.Query.<anonymous> (E:\workspace\demo\demo02\node_modules\mongoose\lib\query.js:3639:23)
+    at model.Query._wrappedThunk [as _updateOne] (E:\workspace\demo\demo02\node_modules\mongoose\lib\helpers\query\wrapThunk.js:16:8)
+    at process.nextTick (E:\workspace\demo\demo02\node_modules\kareem\index.js:369:33)
+    at process._tickCallback (internal/process/next_tick.js:112:11)
+message: "Cast to number failed for value \"NaN\" at path \"count\""
+name: "CastError"
+stringValue: "\"NaN\""
+kind: "number"
+value: null
+path: "count"
+reason: undefined
+pid: 13972
+hostname: DESKTOP-CCIPRHH
+
+2019-05-08 10:56:19,104 ERROR 12556 [-/127.0.0.1/-/22ms POST /signin] nodejs.CastError: Cast to number failed for value "NaN" at path "count"
+    at new CastError (E:\workspace\demo\demo02\node_modules\mongoose\lib\error\cast.js:29:11)
+    at SchemaNumber.cast (E:\workspace\demo\demo02\node_modules\mongoose\lib\schema\number.js:311:11)
+    at SchemaNumber.SchemaType.applySetters (E:\workspace\demo\demo02\node_modules\mongoose\lib\schematype.js:894:12)
+    at SchemaNumber.SchemaType._castForQuery (E:\workspace\demo\demo02\node_modules\mongoose\lib\schematype.js:1306:15)
+    at SchemaNumber.castForQuery (E:\workspace\demo\demo02\node_modules\mongoose\lib\schema\number.js:363:14)
+    at SchemaNumber.SchemaType.castForQueryWrapper (E:\workspace\demo\demo02\node_modules\mongoose\lib\schematype.js:1275:15)
+    at castUpdateVal (E:\workspace\demo\demo02\node_modules\mongoose\lib\helpers\query\castUpdate.js:434:19)
+    at walkUpdatePath (E:\workspace\demo\demo02\node_modules\mongoose\lib\helpers\query\castUpdate.js:261:22)
+    at castUpdate (E:\workspace\demo\demo02\node_modules\mongoose\lib\helpers\query\castUpdate.js:79:18)
+    at model.Query._castUpdate (E:\workspace\demo\demo02\node_modules\mongoose\lib\query.js:4307:10)
+    at castDoc (E:\workspace\demo\demo02\node_modules\mongoose\lib\query.js:4335:18)
+    at model.Query._updateThunk (E:\workspace\demo\demo02\node_modules\mongoose\lib\query.js:3556:17)
+    at model.Query.<anonymous> (E:\workspace\demo\demo02\node_modules\mongoose\lib\query.js:3639:23)
+    at model.Query._wrappedThunk [as _updateOne] (E:\workspace\demo\demo02\node_modules\mongoose\lib\helpers\query\wrapThunk.js:16:8)
+    at process.nextTick (E:\workspace\demo\demo02\node_modules\kareem\index.js:369:33)
+    at process._tickCallback (internal/process/next_tick.js:112:11)
+message: "Cast to number failed for value \"NaN\" at path \"count\""
+name: "CastError"
+stringValue: "\"NaN\""
+kind: "number"
+value: null
+path: "count"
+reason: undefined
+pid: 12556
+hostname: DESKTOP-CCIPRHH
+
+2019-05-08 10:57:23,786 ERROR 8612 nodejs.unhandledExceptionError: read ECONNRESET
+    at TCP.onread (net.js:599:25)
+errno: "ECONNRESET"
+code: "ECONNRESET"
+syscall: "read"
+name: "unhandledExceptionError"
+pid: 8612
+hostname: DESKTOP-CCIPRHH
+
+2019-05-08 14:35:43,592 ERROR 11284 [-/127.0.0.1/-/12ms POST /signin] nodejs.TypeError: Cannot destructure property `ctx` of 'undefined' or 'null'.
+    at token (E:\workspace\demo\demo02\app\middleware\token.js:6:21)
+    at dispatch (E:\workspace\demo\demo02\node_modules\koa-compose\index.js:44:32)
+    at next (E:\workspace\demo\demo02\node_modules\koa-compose\index.js:45:18)
+    at E:\workspace\demo\demo02\node_modules\@eggjs\router\lib\router.js:190:18
+    at dispatch (E:\workspace\demo\demo02\node_modules\koa-compose\index.js:44:32)
+    at E:\workspace\demo\demo02\node_modules\koa-compose\index.js:36:12
+    at dispatch (E:\workspace\demo\demo02\node_modules\@eggjs\router\lib\router.js:195:33)
+    at dispatch (E:\workspace\demo\demo02\node_modules\koa\node_modules\koa-compose\index.js:42:32)
+    at E:\workspace\demo\demo02\node_modules\egg-development\app\middleware\egg_loader_trace.js:9:56
+    at dispatch (E:\workspace\demo\demo02\node_modules\koa\node_modules\koa-compose\index.js:42:32)
+    at i18n (E:\workspace\demo\demo02\node_modules\egg-i18n\app\middleware\i18n.js:13:12)
+    at dispatch (E:\workspace\demo\demo02\node_modules\koa\node_modules\koa-compose\index.js:42:32)
+    at dispatch (E:\workspace\demo\demo02\node_modules\egg-security\node_modules\koa-compose\index.js:42:32)
+    at dta (E:\workspace\demo\demo02\node_modules\egg-security\lib\middlewares\dta.js:12:12)
+    at dispatch (E:\workspace\demo\demo02\node_modules\egg-security\node_modules\koa-compose\index.js:42:32)
+    at xframe (E:\workspace\demo\demo02\node_modules\egg-security\lib\middlewares\xframe.js:7:11)
+
+pid: 11284
+hostname: DESKTOP-CCIPRHH
+
+2019-05-08 14:36:44,342 ERROR 3096 [-/127.0.0.1/-/9ms POST /signin] nodejs.TypeError: Cannot read property 'ctx' of undefined
+    at token (E:\workspace\demo\demo02\app\middleware\token.js:7:26)
+    at dispatch (E:\workspace\demo\demo02\node_modules\koa-compose\index.js:44:32)
+    at next (E:\workspace\demo\demo02\node_modules\koa-compose\index.js:45:18)
+    at E:\workspace\demo\demo02\node_modules\@eggjs\router\lib\router.js:190:18
+    at dispatch (E:\workspace\demo\demo02\node_modules\koa-compose\index.js:44:32)
+    at E:\workspace\demo\demo02\node_modules\koa-compose\index.js:36:12
+    at dispatch (E:\workspace\demo\demo02\node_modules\@eggjs\router\lib\router.js:195:33)
+    at dispatch (E:\workspace\demo\demo02\node_modules\koa\node_modules\koa-compose\index.js:42:32)
+    at E:\workspace\demo\demo02\node_modules\egg-development\app\middleware\egg_loader_trace.js:9:56
+    at dispatch (E:\workspace\demo\demo02\node_modules\koa\node_modules\koa-compose\index.js:42:32)
+    at i18n (E:\workspace\demo\demo02\node_modules\egg-i18n\app\middleware\i18n.js:13:12)
+    at dispatch (E:\workspace\demo\demo02\node_modules\koa\node_modules\koa-compose\index.js:42:32)
+    at dispatch (E:\workspace\demo\demo02\node_modules\egg-security\node_modules\koa-compose\index.js:42:32)
+    at dta (E:\workspace\demo\demo02\node_modules\egg-security\lib\middlewares\dta.js:12:12)
+    at dispatch (E:\workspace\demo\demo02\node_modules\egg-security\node_modules\koa-compose\index.js:42:32)
+    at xframe (E:\workspace\demo\demo02\node_modules\egg-security\lib\middlewares\xframe.js:7:11)
+
+pid: 3096
+hostname: DESKTOP-CCIPRHH
+
+2019-05-08 14:45:24,559 ERROR 14820 [-/127.0.0.1/-/12ms POST /signin] nodejs.TypeError: Cannot read property 'ctx' of undefined
+    at token (E:\workspace\demo\demo02\app\middleware\token.js:6:31)
+    at dispatch (E:\workspace\demo\demo02\node_modules\koa-compose\index.js:44:32)
+    at next (E:\workspace\demo\demo02\node_modules\koa-compose\index.js:45:18)
+    at E:\workspace\demo\demo02\node_modules\@eggjs\router\lib\router.js:190:18
+    at dispatch (E:\workspace\demo\demo02\node_modules\koa-compose\index.js:44:32)
+    at E:\workspace\demo\demo02\node_modules\koa-compose\index.js:36:12
+    at dispatch (E:\workspace\demo\demo02\node_modules\@eggjs\router\lib\router.js:195:33)
+    at dispatch (E:\workspace\demo\demo02\node_modules\koa\node_modules\koa-compose\index.js:42:32)
+    at E:\workspace\demo\demo02\node_modules\egg-development\app\middleware\egg_loader_trace.js:9:56
+    at dispatch (E:\workspace\demo\demo02\node_modules\koa\node_modules\koa-compose\index.js:42:32)
+    at i18n (E:\workspace\demo\demo02\node_modules\egg-i18n\app\middleware\i18n.js:13:12)
+    at dispatch (E:\workspace\demo\demo02\node_modules\koa\node_modules\koa-compose\index.js:42:32)
+    at dispatch (E:\workspace\demo\demo02\node_modules\egg-security\node_modules\koa-compose\index.js:42:32)
+    at dta (E:\workspace\demo\demo02\node_modules\egg-security\lib\middlewares\dta.js:12:12)
+    at dispatch (E:\workspace\demo\demo02\node_modules\egg-security\node_modules\koa-compose\index.js:42:32)
+    at xframe (E:\workspace\demo\demo02\node_modules\egg-security\lib\middlewares\xframe.js:7:11)
+
+pid: 14820
+hostname: DESKTOP-CCIPRHH
+
+2019-05-08 14:50:07,329 ERROR 16560 [-/127.0.0.1/-/13ms POST /signin] nodejs.TypeError: Cannot read property 'ctx' of undefined
+    at token (E:\workspace\demo\demo02\app\middleware\token.js:11:12)
+    at <anonymous>
+    at process._tickCallback (internal/process/next_tick.js:118:7)
+
+pid: 16560
+hostname: DESKTOP-CCIPRHH
+
+2019-05-08 15:20:40,228 ERROR 18000 nodejs.unhandledExceptionError: read ECONNRESET
+    at TCP.onread (net.js:599:25)
+errno: "ECONNRESET"
+code: "ECONNRESET"
+syscall: "read"
+name: "unhandledExceptionError"
+pid: 18000
+hostname: DESKTOP-CCIPRHH
+
+2019-05-08 16:21:25,596 ERROR 18000 nodejs.unhandledExceptionError: read ECONNRESET
+    at TCP.onread (net.js:599:25)
+errno: "ECONNRESET"
+code: "ECONNRESET"
+syscall: "read"
+name: "unhandledExceptionError"
+pid: 18000
+hostname: DESKTOP-CCIPRHH
+
+2019-05-08 16:42:28,018 ERROR 2612 [-/127.0.0.1/-/20ms POST /signin] nodejs.CastError: Cast to embedded failed for value "2" at path "date"
+    at new CastError (E:\workspace\demo\demo02\node_modules\mongoose\lib\error\cast.js:29:11)
+    at DocumentArray.cast (E:\workspace\demo\demo02\node_modules\mongoose\lib\schema\documentarray.js:402:19)
+    at DocumentArray.cast (E:\workspace\demo\demo02\node_modules\mongoose\lib\schema\documentarray.js:336:17)
+    at DocumentArray.SchemaType.applySetters (E:\workspace\demo\demo02\node_modules\mongoose\lib\schematype.js:894:12)
+    at DocumentArray.SchemaType._castForQuery (E:\workspace\demo\demo02\node_modules\mongoose\lib\schematype.js:1306:15)
+    at DocumentArray.SchemaType.castForQueryWrapper (E:\workspace\demo\demo02\node_modules\mongoose\lib\schematype.js:1273:17)
+    at castUpdateVal (E:\workspace\demo\demo02\node_modules\mongoose\lib\helpers\query\castUpdate.js:434:19)
+    at walkUpdatePath (E:\workspace\demo\demo02\node_modules\mongoose\lib\helpers\query\castUpdate.js:261:22)
+    at castUpdate (E:\workspace\demo\demo02\node_modules\mongoose\lib\helpers\query\castUpdate.js:79:18)
+    at model.Query._castUpdate (E:\workspace\demo\demo02\node_modules\mongoose\lib\query.js:4307:10)
+    at castDoc (E:\workspace\demo\demo02\node_modules\mongoose\lib\query.js:4335:18)
+    at model.Query._updateThunk (E:\workspace\demo\demo02\node_modules\mongoose\lib\query.js:3556:17)
+    at model.Query.<anonymous> (E:\workspace\demo\demo02\node_modules\mongoose\lib\query.js:3628:23)
+    at model.Query._wrappedThunk [as _updateMany] (E:\workspace\demo\demo02\node_modules\mongoose\lib\helpers\query\wrapThunk.js:16:8)
+    at process.nextTick (E:\workspace\demo\demo02\node_modules\kareem\index.js:369:33)
+    at process._tickCallback (internal/process/next_tick.js:112:11)
+message: "Cast to embedded failed for value \"2\" at path \"date\""
+name: "CastError"
+stringValue: "\"2\""
+kind: "embedded"
+value: "2"
+path: "date"
+reason: {"message":"Parameter \"obj\" to Document() must be an object, got 2","name":"ObjectParameterError"}
+pid: 2612
+hostname: DESKTOP-CCIPRHH
+
+2019-05-08 16:43:31,778 ERROR 8148 [-/127.0.0.1/-/19ms POST /signin] nodejs.CastError: Cast to embedded failed for value "2" at path "date"
+    at new CastError (E:\workspace\demo\demo02\node_modules\mongoose\lib\error\cast.js:29:11)
+    at DocumentArray.cast (E:\workspace\demo\demo02\node_modules\mongoose\lib\schema\documentarray.js:402:19)
+    at DocumentArray.cast (E:\workspace\demo\demo02\node_modules\mongoose\lib\schema\documentarray.js:336:17)
+    at DocumentArray.SchemaType.applySetters (E:\workspace\demo\demo02\node_modules\mongoose\lib\schematype.js:894:12)
+    at DocumentArray.SchemaType._castForQuery (E:\workspace\demo\demo02\node_modules\mongoose\lib\schematype.js:1306:15)
+    at DocumentArray.SchemaType.castForQueryWrapper (E:\workspace\demo\demo02\node_modules\mongoose\lib\schematype.js:1273:17)
+    at castUpdateVal (E:\workspace\demo\demo02\node_modules\mongoose\lib\helpers\query\castUpdate.js:434:19)
+    at walkUpdatePath (E:\workspace\demo\demo02\node_modules\mongoose\lib\helpers\query\castUpdate.js:261:22)
+    at castUpdate (E:\workspace\demo\demo02\node_modules\mongoose\lib\helpers\query\castUpdate.js:79:18)
+    at model.Query._castUpdate (E:\workspace\demo\demo02\node_modules\mongoose\lib\query.js:4307:10)
+    at castDoc (E:\workspace\demo\demo02\node_modules\mongoose\lib\query.js:4335:18)
+    at model.Query._updateThunk (E:\workspace\demo\demo02\node_modules\mongoose\lib\query.js:3556:17)
+    at model.Query.<anonymous> (E:\workspace\demo\demo02\node_modules\mongoose\lib\query.js:3628:23)
+    at model.Query._wrappedThunk [as _updateMany] (E:\workspace\demo\demo02\node_modules\mongoose\lib\helpers\query\wrapThunk.js:16:8)
+    at process.nextTick (E:\workspace\demo\demo02\node_modules\kareem\index.js:369:33)
+    at process._tickCallback (internal/process/next_tick.js:112:11)
+message: "Cast to embedded failed for value \"2\" at path \"date\""
+name: "CastError"
+stringValue: "\"2\""
+kind: "embedded"
+value: "2"
+path: "date"
+reason: {"message":"Parameter \"obj\" to Document() must be an object, got 2","name":"ObjectParameterError"}
+pid: 8148
+hostname: DESKTOP-CCIPRHH
+
+2019-05-08 17:07:10,286 ERROR 7324 [-/127.0.0.1/-/273ms POST /signin] nodejs.MongoError: Cannot apply $addToSet to non-array field. Field named 'date' has non-array type null
+    at Function.create (E:\workspace\demo\demo02\node_modules\mongodb-core\lib\error.js:43:12)
+    at toError (E:\workspace\demo\demo02\node_modules\mongodb\lib\utils.js:149:22)
+    at coll.s.topology.update (E:\workspace\demo\demo02\node_modules\mongodb\lib\operations\collection_ops.js:1465:39)
+    at E:\workspace\demo\demo02\node_modules\mongodb-core\lib\connection\pool.js:397:18
+    at process._tickCallback (internal/process/next_tick.js:112:11)
+driver: true
+name: "MongoError"
+index: 0
+code: 2
+errmsg: "Cannot apply $addToSet to non-array field. Field named 'date' has non-array type null"
+pid: 7324
+hostname: DESKTOP-CCIPRHH
+
+2019-05-08 17:07:36,267 ERROR 7324 [-/127.0.0.1/-/5ms POST /signin] nodejs.MongoError: Cannot apply $addToSet to non-array field. Field named 'date' has non-array type null
+    at Function.create (E:\workspace\demo\demo02\node_modules\mongodb-core\lib\error.js:43:12)
+    at toError (E:\workspace\demo\demo02\node_modules\mongodb\lib\utils.js:149:22)
+    at coll.s.topology.update (E:\workspace\demo\demo02\node_modules\mongodb\lib\operations\collection_ops.js:1465:39)
+    at E:\workspace\demo\demo02\node_modules\mongodb-core\lib\connection\pool.js:397:18
+    at process._tickCallback (internal/process/next_tick.js:112:11)
+driver: true
+name: "MongoError"
+index: 0
+code: 2
+errmsg: "Cannot apply $addToSet to non-array field. Field named 'date' has non-array type null"
+pid: 7324
+hostname: DESKTOP-CCIPRHH
+
+2019-05-08 17:09:55,221 ERROR 17888 [-/127.0.0.1/-/24ms POST /signin] nodejs.MongoError: Cannot apply $addToSet to non-array field. Field named 'date' has non-array type null
+    at Function.create (E:\workspace\demo\demo02\node_modules\mongodb-core\lib\error.js:43:12)
+    at toError (E:\workspace\demo\demo02\node_modules\mongodb\lib\utils.js:149:22)
+    at coll.s.topology.update (E:\workspace\demo\demo02\node_modules\mongodb\lib\operations\collection_ops.js:1465:39)
+    at E:\workspace\demo\demo02\node_modules\mongodb-core\lib\connection\pool.js:397:18
+    at process._tickCallback (internal/process/next_tick.js:112:11)
+driver: true
+name: "MongoError"
+index: 0
+code: 2
+errmsg: "Cannot apply $addToSet to non-array field. Field named 'date' has non-array type null"
+pid: 17888
+hostname: DESKTOP-CCIPRHH
+
+2019-05-08 17:21:28,199 ERROR 18000 nodejs.unhandledExceptionError: read ECONNRESET
+    at TCP.onread (net.js:599:25)
+errno: "ECONNRESET"
+code: "ECONNRESET"
+syscall: "read"
+name: "unhandledExceptionError"
+pid: 18000
+hostname: DESKTOP-CCIPRHH
+
+2019-05-08 17:26:36,347 ERROR 4108 [-/127.0.0.1/-/43ms POST /signin] nodejs.TypeError: Cannot read property 'sign_his' of undefined
+    at SigninService.signin (E:\workspace\demo\demo02\app\service\signin.js:84:48)
+    at <anonymous>
+    at process._tickCallback (internal/process/next_tick.js:118:7)
+
+pid: 4108
+hostname: DESKTOP-CCIPRHH
+
+2019-05-08 18:22:17,313 ERROR 18000 nodejs.unhandledExceptionError: read ECONNRESET
+    at TCP.onread (net.js:599:25)
+errno: "ECONNRESET"
+code: "ECONNRESET"
+syscall: "read"
+name: "unhandledExceptionError"
+pid: 18000
+hostname: DESKTOP-CCIPRHH
+
+2019-05-08 21:08:01,402 ERROR 21740 [-/127.0.0.1/-/32ms POST /signin] nodejs.TypeError: Cannot destructure property `request` of 'undefined' or 'null'.
+    at HomeController.signin (E:\workspace\demo\demo02\app\controller\home.js:25:60)
+    at Object.callFn (E:\workspace\demo\demo02\node_modules\egg-core\lib\utils\index.js:44:21)
+    at Object.classControllerMiddleware (E:\workspace\demo\demo02\node_modules\egg-core\lib\loader\mixin\controller.js:87:20)
+    at Object.callFn (E:\workspace\demo\demo02\node_modules\@eggjs\router\lib\utils.js:12:21)
+    at wrappedController (E:\workspace\demo\demo02\node_modules\@eggjs\router\lib\egg_router.js:322:18)
+    at dispatch (E:\workspace\demo\demo02\node_modules\koa-compose\index.js:44:32)
+    at next (E:\workspace\demo\demo02\node_modules\koa-compose\index.js:45:18)
+    at token (E:\workspace\demo\demo02\app\middleware\token.js:6:11)
+    at dispatch (E:\workspace\demo\demo02\node_modules\koa-compose\index.js:44:32)
+    at next (E:\workspace\demo\demo02\node_modules\koa-compose\index.js:45:18)
+    at E:\workspace\demo\demo02\node_modules\@eggjs\router\lib\router.js:190:18
+    at dispatch (E:\workspace\demo\demo02\node_modules\koa-compose\index.js:44:32)
+    at E:\workspace\demo\demo02\node_modules\koa-compose\index.js:36:12
+    at dispatch (E:\workspace\demo\demo02\node_modules\@eggjs\router\lib\router.js:195:33)
+    at dispatch (E:\workspace\demo\demo02\node_modules\koa\node_modules\koa-compose\index.js:42:32)
+    at E:\workspace\demo\demo02\node_modules\egg-development\app\middleware\egg_loader_trace.js:9:56
+
+pid: 21740
+hostname: DESKTOP-CCIPRHH
+
+2019-05-09 10:54:00,024 ERROR 8944 [-/127.0.0.1/-/90ms POST /signin] nodejs.TypeError: Cannot destructure property `request` of 'undefined' or 'null'.
+    at HomeController.signin (E:\workspace\demo\demo02\app\controller\home.js:25:60)
+    at Object.callFn (E:\workspace\demo\demo02\node_modules\egg-core\lib\utils\index.js:44:21)
+    at Object.classControllerMiddleware (E:\workspace\demo\demo02\node_modules\egg-core\lib\loader\mixin\controller.js:87:20)
+    at Object.callFn (E:\workspace\demo\demo02\node_modules\@eggjs\router\lib\utils.js:12:21)
+    at wrappedController (E:\workspace\demo\demo02\node_modules\@eggjs\router\lib\egg_router.js:322:18)
+    at dispatch (E:\workspace\demo\demo02\node_modules\koa-compose\index.js:44:32)
+    at next (E:\workspace\demo\demo02\node_modules\koa-compose\index.js:45:18)
+    at token (E:\workspace\demo\demo02\app\middleware\token.js:12:11)
+    at <anonymous>
+    at process._tickCallback (internal/process/next_tick.js:118:7)
+
+pid: 8944
+hostname: DESKTOP-CCIPRHH
+
+2019-05-09 10:54:01,327 ERROR 8944 [-/127.0.0.1/-/3ms POST /signin] nodejs.TypeError: Cannot destructure property `request` of 'undefined' or 'null'.
+    at HomeController.signin (E:\workspace\demo\demo02\app\controller\home.js:25:60)
+    at Object.callFn (E:\workspace\demo\demo02\node_modules\egg-core\lib\utils\index.js:44:21)
+    at Object.classControllerMiddleware (E:\workspace\demo\demo02\node_modules\egg-core\lib\loader\mixin\controller.js:87:20)
+    at Object.callFn (E:\workspace\demo\demo02\node_modules\@eggjs\router\lib\utils.js:12:21)
+    at wrappedController (E:\workspace\demo\demo02\node_modules\@eggjs\router\lib\egg_router.js:322:18)
+    at dispatch (E:\workspace\demo\demo02\node_modules\koa-compose\index.js:44:32)
+    at next (E:\workspace\demo\demo02\node_modules\koa-compose\index.js:45:18)
+    at token (E:\workspace\demo\demo02\app\middleware\token.js:12:11)
+    at <anonymous>
+    at process._tickCallback (internal/process/next_tick.js:118:7)
+
+pid: 8944
+hostname: DESKTOP-CCIPRHH
+
+2019-05-09 10:54:03,591 ERROR 8944 [-/127.0.0.1/-/4ms POST /signin] nodejs.TypeError: Cannot destructure property `request` of 'undefined' or 'null'.
+    at HomeController.signin (E:\workspace\demo\demo02\app\controller\home.js:25:60)
+    at Object.callFn (E:\workspace\demo\demo02\node_modules\egg-core\lib\utils\index.js:44:21)
+    at Object.classControllerMiddleware (E:\workspace\demo\demo02\node_modules\egg-core\lib\loader\mixin\controller.js:87:20)
+    at Object.callFn (E:\workspace\demo\demo02\node_modules\@eggjs\router\lib\utils.js:12:21)
+    at wrappedController (E:\workspace\demo\demo02\node_modules\@eggjs\router\lib\egg_router.js:322:18)
+    at dispatch (E:\workspace\demo\demo02\node_modules\koa-compose\index.js:44:32)
+    at next (E:\workspace\demo\demo02\node_modules\koa-compose\index.js:45:18)
+    at token (E:\workspace\demo\demo02\app\middleware\token.js:12:11)
+    at <anonymous>
+    at process._tickCallback (internal/process/next_tick.js:118:7)
+
+pid: 8944
+hostname: DESKTOP-CCIPRHH
+
+2019-05-09 10:54:06,294 ERROR 8944 [-/127.0.0.1/-/2ms POST /signin] nodejs.TypeError: Cannot destructure property `request` of 'undefined' or 'null'.
+    at HomeController.signin (E:\workspace\demo\demo02\app\controller\home.js:25:60)
+    at Object.callFn (E:\workspace\demo\demo02\node_modules\egg-core\lib\utils\index.js:44:21)
+    at Object.classControllerMiddleware (E:\workspace\demo\demo02\node_modules\egg-core\lib\loader\mixin\controller.js:87:20)
+    at Object.callFn (E:\workspace\demo\demo02\node_modules\@eggjs\router\lib\utils.js:12:21)
+    at wrappedController (E:\workspace\demo\demo02\node_modules\@eggjs\router\lib\egg_router.js:322:18)
+    at dispatch (E:\workspace\demo\demo02\node_modules\koa-compose\index.js:44:32)
+    at next (E:\workspace\demo\demo02\node_modules\koa-compose\index.js:45:18)
+    at token (E:\workspace\demo\demo02\app\middleware\token.js:12:11)
+    at <anonymous>
+    at process._tickCallback (internal/process/next_tick.js:118:7)
+
+pid: 8944
+hostname: DESKTOP-CCIPRHH
+
+2019-05-09 10:54:08,062 ERROR 8944 [-/127.0.0.1/-/2ms POST /signin] nodejs.TypeError: Cannot destructure property `body` of 'undefined' or 'null'.
+    at HomeController.signin (E:\workspace\demo\demo02\app\controller\home.js:25:13)
+    at Object.callFn (E:\workspace\demo\demo02\node_modules\egg-core\lib\utils\index.js:44:21)
+    at Object.classControllerMiddleware (E:\workspace\demo\demo02\node_modules\egg-core\lib\loader\mixin\controller.js:87:20)
+    at Object.callFn (E:\workspace\demo\demo02\node_modules\@eggjs\router\lib\utils.js:12:21)
+    at wrappedController (E:\workspace\demo\demo02\node_modules\@eggjs\router\lib\egg_router.js:322:18)
+    at dispatch (E:\workspace\demo\demo02\node_modules\koa-compose\index.js:44:32)
+    at next (E:\workspace\demo\demo02\node_modules\koa-compose\index.js:45:18)
+    at token (E:\workspace\demo\demo02\app\middleware\token.js:12:11)
+    at <anonymous>
+    at process._tickCallback (internal/process/next_tick.js:118:7)
+
+pid: 8944
+hostname: DESKTOP-CCIPRHH
+
+2019-05-09 10:54:08,694 ERROR 8944 [-/127.0.0.1/-/3ms POST /signin] nodejs.TypeError: Cannot destructure property `body` of 'undefined' or 'null'.
+    at HomeController.signin (E:\workspace\demo\demo02\app\controller\home.js:25:13)
+    at Object.callFn (E:\workspace\demo\demo02\node_modules\egg-core\lib\utils\index.js:44:21)
+    at Object.classControllerMiddleware (E:\workspace\demo\demo02\node_modules\egg-core\lib\loader\mixin\controller.js:87:20)
+    at Object.callFn (E:\workspace\demo\demo02\node_modules\@eggjs\router\lib\utils.js:12:21)
+    at wrappedController (E:\workspace\demo\demo02\node_modules\@eggjs\router\lib\egg_router.js:322:18)
+    at dispatch (E:\workspace\demo\demo02\node_modules\koa-compose\index.js:44:32)
+    at next (E:\workspace\demo\demo02\node_modules\koa-compose\index.js:45:18)
+    at token (E:\workspace\demo\demo02\app\middleware\token.js:12:11)
+    at <anonymous>
+    at process._tickCallback (internal/process/next_tick.js:118:7)
+
+pid: 8944
+hostname: DESKTOP-CCIPRHH
+
+2019-05-09 10:54:40,121 ERROR 8944 [-/127.0.0.1/-/3ms POST /signin] nodejs.TypeError: Cannot destructure property `body` of 'undefined' or 'null'.
+    at HomeController.signin (E:\workspace\demo\demo02\app\controller\home.js:25:13)
+    at Object.callFn (E:\workspace\demo\demo02\node_modules\egg-core\lib\utils\index.js:44:21)
+    at Object.classControllerMiddleware (E:\workspace\demo\demo02\node_modules\egg-core\lib\loader\mixin\controller.js:87:20)
+    at Object.callFn (E:\workspace\demo\demo02\node_modules\@eggjs\router\lib\utils.js:12:21)
+    at wrappedController (E:\workspace\demo\demo02\node_modules\@eggjs\router\lib\egg_router.js:322:18)
+    at dispatch (E:\workspace\demo\demo02\node_modules\koa-compose\index.js:44:32)
+    at next (E:\workspace\demo\demo02\node_modules\koa-compose\index.js:45:18)
+    at token (E:\workspace\demo\demo02\app\middleware\token.js:12:11)
+    at <anonymous>
+    at process._tickCallback (internal/process/next_tick.js:118:7)
+
+pid: 8944
+hostname: DESKTOP-CCIPRHH
+
+2019-05-09 10:55:41,886 ERROR 15004 [-/127.0.0.1/-/17ms POST /signin] nodejs.TypeError: Cannot destructure property `body` of 'undefined' or 'null'.
+    at HomeController.signin (E:\workspace\demo\demo02\app\controller\home.js:25:13)
+    at Object.callFn (E:\workspace\demo\demo02\node_modules\egg-core\lib\utils\index.js:44:21)
+    at Object.classControllerMiddleware (E:\workspace\demo\demo02\node_modules\egg-core\lib\loader\mixin\controller.js:87:20)
+    at Object.callFn (E:\workspace\demo\demo02\node_modules\@eggjs\router\lib\utils.js:12:21)
+    at wrappedController (E:\workspace\demo\demo02\node_modules\@eggjs\router\lib\egg_router.js:322:18)
+    at dispatch (E:\workspace\demo\demo02\node_modules\koa-compose\index.js:44:32)
+    at next (E:\workspace\demo\demo02\node_modules\koa-compose\index.js:45:18)
+    at token (E:\workspace\demo\demo02\app\middleware\token.js:12:11)
+    at <anonymous>
+    at process._tickCallback (internal/process/next_tick.js:118:7)
+
+pid: 15004
+hostname: DESKTOP-CCIPRHH
+
+2019-05-09 10:56:21,145 ERROR 2472 [-/127.0.0.1/-/12ms POST /signin] nodejs.TypeError: Cannot destructure property `userid` of 'undefined' or 'null'.
+    at HomeController.signin (E:\workspace\demo\demo02\app\controller\home.js:25:21)
+    at Object.callFn (E:\workspace\demo\demo02\node_modules\egg-core\lib\utils\index.js:44:21)
+    at Object.classControllerMiddleware (E:\workspace\demo\demo02\node_modules\egg-core\lib\loader\mixin\controller.js:87:20)
+    at Object.callFn (E:\workspace\demo\demo02\node_modules\@eggjs\router\lib\utils.js:12:21)
+    at wrappedController (E:\workspace\demo\demo02\node_modules\@eggjs\router\lib\egg_router.js:322:18)
+    at dispatch (E:\workspace\demo\demo02\node_modules\koa-compose\index.js:44:32)
+    at next (E:\workspace\demo\demo02\node_modules\koa-compose\index.js:45:18)
+    at token (E:\workspace\demo\demo02\app\middleware\token.js:12:11)
+    at <anonymous>
+    at process._tickCallback (internal/process/next_tick.js:118:7)
+
+pid: 2472
+hostname: DESKTOP-CCIPRHH
+
+2019-05-09 10:56:37,689 ERROR 10356 [-/127.0.0.1/-/12ms POST /signin] nodejs.TypeError: Cannot destructure property `userid` of 'undefined' or 'null'.
+    at HomeController.signin (E:\workspace\demo\demo02\app\controller\home.js:25:21)
+    at Object.callFn (E:\workspace\demo\demo02\node_modules\egg-core\lib\utils\index.js:44:21)
+    at Object.classControllerMiddleware (E:\workspace\demo\demo02\node_modules\egg-core\lib\loader\mixin\controller.js:87:20)
+    at Object.callFn (E:\workspace\demo\demo02\node_modules\@eggjs\router\lib\utils.js:12:21)
+    at wrappedController (E:\workspace\demo\demo02\node_modules\@eggjs\router\lib\egg_router.js:322:18)
+    at dispatch (E:\workspace\demo\demo02\node_modules\koa-compose\index.js:44:32)
+    at next (E:\workspace\demo\demo02\node_modules\koa-compose\index.js:45:18)
+    at token (E:\workspace\demo\demo02\app\middleware\token.js:12:11)
+    at <anonymous>
+    at process._tickCallback (internal/process/next_tick.js:118:7)
+
+pid: 10356
+hostname: DESKTOP-CCIPRHH
+
+2019-05-09 11:03:26,727 ERROR 4988 nodejs.unhandledExceptionError: read ECONNRESET
+    at TCP.onread (net.js:599:25)
+errno: "ECONNRESET"
+code: "ECONNRESET"
+syscall: "read"
+name: "unhandledExceptionError"
+pid: 4988
+hostname: DESKTOP-CCIPRHH
+
+2019-05-09 14:11:03,746 ERROR 18412 [-/127.0.0.1/-/7ms POST /signin] nodejs.MongooseError: Callback must be a function, got [object Object]
+    at new MongooseError (E:\workspace\demo\demo02\node_modules\mongoose\lib\error\mongooseError.js:14:11)
+    at Function.Model.$wrapCallback (E:\workspace\demo\demo02\node_modules\mongoose\lib\model.js:4726:11)
+    at Function.Model.findOneAndUpdate (E:\workspace\demo\demo02\node_modules\mongoose\lib\model.js:2306:21)
+    at SigninService.signin (E:\workspace\demo\demo02\app\service\signin.js:61:47)
+    at <anonymous>
+    at process._tickCallback (internal/process/next_tick.js:118:7)
+message: "Callback must be a function, got [object Object]"
+name: "MongooseError"
+pid: 18412
+hostname: DESKTOP-CCIPRHH
+
+2019-05-09 14:12:20,944 ERROR 5084 [-/127.0.0.1/-/5ms POST /signin] nodejs.MongooseError: Callback must be a function, got [object Object]
+    at new MongooseError (E:\workspace\demo\demo02\node_modules\mongoose\lib\error\mongooseError.js:14:11)
+    at Function.Model.$wrapCallback (E:\workspace\demo\demo02\node_modules\mongoose\lib\model.js:4726:11)
+    at Function.Model.findOneAndUpdate (E:\workspace\demo\demo02\node_modules\mongoose\lib\model.js:2306:21)
+    at SigninService.signin (E:\workspace\demo\demo02\app\service\signin.js:61:47)
+    at <anonymous>
+    at process._tickCallback (internal/process/next_tick.js:118:7)
+message: "Callback must be a function, got [object Object]"
+name: "MongooseError"
+pid: 5084
+hostname: DESKTOP-CCIPRHH
+
+2019-05-09 14:19:09,115 ERROR 1088 [-/127.0.0.1/-/15ms POST /signin] nodejs.MongooseError: Callback must be a function, got [object Object]
+    at new MongooseError (E:\workspace\demo\demo02\node_modules\mongoose\lib\error\mongooseError.js:14:11)
+    at Function.Model.$wrapCallback (E:\workspace\demo\demo02\node_modules\mongoose\lib\model.js:4726:11)
+    at Function.Model.findOneAndUpdate (E:\workspace\demo\demo02\node_modules\mongoose\lib\model.js:2306:21)
+    at SigninService.signin (E:\workspace\demo\demo02\app\service\signin.js:61:47)
+    at <anonymous>
+    at process._tickCallback (internal/process/next_tick.js:118:7)
+message: "Callback must be a function, got [object Object]"
+name: "MongooseError"
+pid: 1088
+hostname: DESKTOP-CCIPRHH
+
+2019-05-09 14:21:56,439 ERROR 7920 [-/127.0.0.1/-/17ms POST /signin] nodejs.StrictModeError: Path "user_id" is not in schema, strict mode is `true`, and upsert is `true`.
+    at new StrictModeError (E:\workspace\demo\demo02\node_modules\mongoose\lib\error\strict.js:24:11)
+    at cast (E:\workspace\demo\demo02\node_modules\mongoose\lib\cast.js:236:17)
+    at model.Query.Query.cast (E:\workspace\demo\demo02\node_modules\mongoose\lib\query.js:4478:12)
+    at castQuery (E:\workspace\demo\demo02\node_modules\mongoose\lib\query.js:4322:18)
+    at model.Query.Query._findAndModify (E:\workspace\demo\demo02\node_modules\mongoose\lib\query.js:3279:23)
+    at model.Query.<anonymous> (E:\workspace\demo\demo02\node_modules\mongoose\lib\query.js:2892:8)
+    at model.Query._wrappedThunk [as _findOneAndUpdate] (E:\workspace\demo\demo02\node_modules\mongoose\lib\helpers\query\wrapThunk.js:16:8)
+    at process.nextTick (E:\workspace\demo\demo02\node_modules\kareem\index.js:369:33)
+    at process._tickCallback (internal/process/next_tick.js:112:11)
+message: "Path \"user_id\" is not in schema, strict mode is `true`, and upsert is `true`."
+name: "StrictModeError"
+path: "user_id"
+pid: 7920
+hostname: DESKTOP-CCIPRHH
+
