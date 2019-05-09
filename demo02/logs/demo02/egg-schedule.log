@@ -450,3 +450,5 @@
 2019-05-09 15:45:43,644 INFO 21444 [egg-schedule]: register schedule E:\workspace\demo\demo02\node_modules\egg-logrotator\app\schedule\rotate_by_file.js
 2019-05-09 15:46:37,978 INFO 7288 [egg-schedule]: register schedule E:\workspace\demo\demo02\node_modules\egg-logrotator\app\schedule\clean_log.js
 2019-05-09 15:46:37,978 INFO 7288 [egg-schedule]: register schedule E:\workspace\demo\demo02\node_modules\egg-logrotator\app\schedule\rotate_by_file.js
+2019-05-09 16:26:41,633 INFO 13072 [egg-schedule]: register schedule E:\workspace\demo\demo02\node_modules\egg-logrotator\app\schedule\clean_log.js
+2019-05-09 16:26:41,633 INFO 13072 [egg-schedule]: register schedule E:\workspace\demo\demo02\node_modules\egg-logrotator\app\schedule\rotate_by_file.js

@@ -3384,3 +3384,20 @@ hostname: DESKTOP-CCIPRHH
 2019-05-09 15:46:38,406 INFO 7288 [egg-mongoose] instance[0] start successfully
 2019-05-09 15:46:38,407 INFO 7288 [egg-watcher:application] watcher start success
 2019-05-09 15:46:38,425 INFO 7288 [egg:core] dump config after ready, 14ms
+2019-05-09 16:26:41,601 INFO 13072 [egg:logger] init all loggers with options: {"dir":"E:\\workspace\\demo\\demo02\\logs\\demo02","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"demo02-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"type":"application"}
+2019-05-09 16:26:41,634 INFO 13072 [egg-multipart] stream mode enable
+2019-05-09 16:26:41,902 INFO 13072 [egg-mongoose] connecting mongodb://127.0.0.1:27017/test
+2019-05-09 16:26:41,965 INFO 13072 [egg-static] starting static serve /public/ -> E:\workspace\demo\demo02\app\public
+2019-05-09 16:26:41,968 INFO 13072 [egg-security] use methodnoallow middleware
+2019-05-09 16:26:41,968 INFO 13072 [egg-security] use noopen middleware
+2019-05-09 16:26:41,969 INFO 13072 [egg-security] use nosniff middleware
+2019-05-09 16:26:41,970 INFO 13072 [egg-security] use xssProtection middleware
+2019-05-09 16:26:41,970 INFO 13072 [egg-security] use xframe middleware
+2019-05-09 16:26:41,971 INFO 13072 [egg-security] use dta middleware
+2019-05-09 16:26:41,971 INFO 13072 [egg-security] compose 6 middlewares into one security middleware
+2019-05-09 16:26:41,986 INFO 13072 [egg:core] dump config after load, 12ms
+2019-05-09 16:26:41,989 INFO 13072 [egg-mongoose] starting...
+2019-05-09 16:26:42,034 INFO 13072 [egg-mongoose] mongodb://127.0.0.1:27017/test connected successfully
+2019-05-09 16:26:42,040 INFO 13072 [egg-mongoose] instance[0] start successfully
+2019-05-09 16:26:42,042 INFO 13072 [egg-watcher:application] watcher start success
+2019-05-09 16:26:42,252 INFO 13072 [egg:core] dump config after ready, 206ms
